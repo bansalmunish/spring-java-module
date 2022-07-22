@@ -1,8 +1,9 @@
-module com.example.audit {
+open module com.example.audit {
+
+    requires com.example.commons;
 
     exports com.example.audit;
-    exports com.example.audit.logger.impl;
-
+    exports com.example.audit.logger.controller to com.example.web;
 
     requires java.base;
     requires static lombok;
@@ -10,4 +11,6 @@ module com.example.audit {
     requires spring.context;
     requires spring.aop;
     requires org.aspectj.weaver;
+
+
 }

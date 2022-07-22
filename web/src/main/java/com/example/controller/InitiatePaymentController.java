@@ -1,7 +1,7 @@
 package com.example.controller;
 
 import com.example.audit.AuditLog;
-import com.example.audit.logger.impl.InitiatePaymentControllerAuditLogger;
+import com.example.audit.logger.controller.InitiatePaymentControllerAuditLogger;
 import com.example.commons.PaymentRequest;
 import com.example.commons.PaymentResponse;
 import com.example.service.PaymentService;

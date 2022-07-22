@@ -1,4 +1,4 @@
-module com.example.service{
+open module com.example.service{
 
     exports com.example.service;
 

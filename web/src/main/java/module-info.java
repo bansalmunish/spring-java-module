@@ -1,4 +1,4 @@
-module com.example.web{
+open module com.example.web{
     exports com.example.controller;
 
     requires com.example.commons;
@@ -8,10 +8,10 @@ module com.example.web{
 
     requires static lombok;
 
+    requires spring.core;
     requires spring.web;
     requires spring.boot;
     requires spring.context;
     requires spring.boot.autoconfigure;
-
 
 }

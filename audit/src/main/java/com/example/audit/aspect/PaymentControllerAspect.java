@@ -2,6 +2,7 @@ package com.example.audit.aspect;
 
 import com.example.audit.AuditLog;
 import com.example.audit.logger.AuditLogger;
+import com.example.commons.error.CustomException;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
@@ -38,13 +39,13 @@ public class PaymentControllerAspect {
     }
 
     @AfterThrowing(value = "@annotation(com.example.audit.AuditLog)", throwing = "e")
-    public void myAdvice(JoinPoint joinPoint, Exception e){
+    public void myAdvice(JoinPoint joinPoint, CustomException e){
         log.info("EXCEPTION CAUGHT");
         callActualLogger(joinPoint, null, e, 0);
         Thread.setDefaultUncaughtExceptionHandler((t, e1) -> log.info("Caught " + e1.getMessage()));
     }
 
-    private void callActualLogger(JoinPoint joinPoint, Object response, Exception e, long executionTime) {
+    private void callActualLogger(JoinPoint joinPoint, Object response, CustomException e, long executionTime) {
 
         //https://www.baeldung.com/spring-aop-get-advised-method-info
 

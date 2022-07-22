@@ -1,4 +1,4 @@
-module com.example.util{
+open module com.example.util{
 
     exports com.example.util;
 
