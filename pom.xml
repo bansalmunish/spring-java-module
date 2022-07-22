@@ -23,6 +23,7 @@
         <module>util</module>
         <module>service</module>
         <module>web</module>
+        <module>gateway</module>
     </modules>
 
     <properties>

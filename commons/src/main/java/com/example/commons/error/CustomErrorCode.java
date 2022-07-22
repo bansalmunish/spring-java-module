@@ -1,8 +1,11 @@
 package com.example.commons.error;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+
 import org.springframework.http.HttpStatus;
 
+@Getter
 @AllArgsConstructor
 public enum CustomErrorCode {
 

@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 @Slf4j
 @Component
-public class InitiatePaymentControllerAuditLogger implements AuditLogger {
+public class InitiatePaymentAuditLogger implements AuditLogger {
 
     @Override
     public void log(String methodName, Object[] args, Object value, CustomException e, long executionTime) {
