@@ -1,4 +1,4 @@
-package com.example.audit.logger.controller;
+package com.example.audit.logger.gateway;
 
 import com.example.audit.logger.AuditLogger;
 import com.example.commons.error.CustomException;
@@ -9,8 +9,7 @@ import java.util.Arrays;
 
 @Slf4j
 @Component
-public class InitiatePaymentAuditLogger implements AuditLogger {
-
+public class InitiatePaymentGatewayAuditLogger implements AuditLogger {
     @Override
     public void log(String methodName, Object[] args, Object value, CustomException e, long executionTime) {
         log.info("logging method : {}", methodName);
