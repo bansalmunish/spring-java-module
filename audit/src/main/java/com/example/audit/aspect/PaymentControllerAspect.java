@@ -3,6 +3,7 @@ package com.example.audit.aspect;
 import com.example.audit.AuditLog;
 import com.example.audit.logger.AuditLogger;
 import com.example.commons.error.CustomException;
+import io.micrometer.core.annotation.Timed;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;

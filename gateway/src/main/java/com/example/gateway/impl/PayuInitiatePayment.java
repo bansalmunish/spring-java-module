@@ -15,6 +15,12 @@ public class PayuInitiatePayment implements InitiatePayment {
     public PaymentResponse getHtml(PaymentRequest paymentRequest) {
         PaymentResponse paymentResponse = new PaymentResponse();
         paymentResponse.setHtml("this is the payu html for amount " + paymentRequest.getAmount());
+
+        try {
+            Thread.sleep((long) (Math.random()*1000));
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         return paymentResponse;
     }
 }

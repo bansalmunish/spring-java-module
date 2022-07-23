@@ -1,5 +1,6 @@
 open module com.example.audit {
 
+    requires micrometer.core;
     requires com.example.commons;
 
     exports com.example.audit;
@@ -7,7 +8,8 @@ open module com.example.audit {
     exports com.example.audit.logger.gateway to com.example.gateway;
     exports com.example.audit.logger.controller to com.example.web;
 
-    requires java.base;
+//    requires java.base;
+    requires java.annotation;
     requires static lombok;
     requires org.slf4j;
     requires spring.context;
